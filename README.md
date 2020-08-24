@@ -128,4 +128,77 @@ Basics (applicable to 2/3 above):
     Test case to check the winner between player with a two pairs and one pair for 4 card hand
     '''
     
-    8. 
+    8. test_annotations():
+    """
+    Test case to check the function typing are implemented in the function
+    definition.
+    """
+    
+    9. test_one_two_pair_5():
+    '''
+    Test case to check the winner between player with a two pairs and one pair for 5 card hand
+    '''
+    
+    10. test_draw_4():
+    '''
+    Test case to check the draw between 2 player hands
+    '''
+    
+    11. test_draw_5():
+    '''
+    Test case to check the draw between 2 player hands for 5 cards
+    '''
+    
+    12. test_doc_strings():
+    """
+    Test case to check the docstrings are included in the function definition.
+    """
+    
+    13. test_indentations():
+    ''' Returns pass if used four spaces for each level of syntactically \
+    significant indenting.'''
+    
+    14. test_straight_flush_5():
+    '''
+    Test case to check the winner between player with a straight or a flush for 5 card hands
+    '''
+    
+    15. test_straight_flush_4():
+    '''
+    Test case to check the winner between player with a straight or a flush for 4 card hands
+    '''
+    
+    16. test_straight_flush_3():
+    '''
+    Test case to check the winner between player with a straight or a flush for 3 card hands
+    '''
+    
+    17. test_two_pair_three():
+    '''
+    Test case to check the winner between player with a two pairs and 3 of a kind
+    '''
+    
+    18. test_straight_three():
+    '''
+    Test case to check the winner between player with a two pairs and 3 of a kind
+    '''
+    
+    19. test_flush_full():
+    '''
+    Test case to check the winner between player with a flush or full house
+    '''
+    
+    20. test_full_four():
+    '''
+    Test case to check the winner between player with a four of a kind or full house
+    '''
+    
+    21. test_four_straightflush():
+    '''
+    Test case to check the winner between player with a straight flush or four of a kind
+    '''
+    
+    22. test_straight_royalflush():
+    '''
+    Test case to check the winner between player with a straight flush or royal flush
+    '''

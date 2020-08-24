@@ -1,9 +1,19 @@
+'''
+Import required libraries
+'''
 from itertools import cycle, product
 import collections
+
+'''
+Initialise the values
+'''
 
 vals = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']
 suits = ['spades', 'clubs', 'hearts', 'diamonds']
 
+'''
+Function to create 52 card deck using map, lambda and zip functions
+'''
 l1 = list(map(lambda x: x, zip(vals * len(suits), suits * len(vals))))
 
 
@@ -178,25 +188,3 @@ def poker_winner(player1:'Player 1 hand', player2: 'Player 2 hand') ->str:
     else:
         print("player2 wins")
         return "player2"
-
-#check_one_pair(['3H','3H','5S','5H'])
-
-check_two_pairs(['3H','3H','5S','5H'])
-
-#check_full_house(['3H','3H','5S','5H'])
-
-#check_four_of_a_kind(['3H','3H','5S','5H'])
-
-#check_three_of_a_kind(['3H','3H','5H','5S'])
-
-#poker_winner(player1=['3H', '10H', 'AH'], player2=['7S', '8S', '9S'])
-
-#check_straight(['3H','4H','5H','6S','7H'])
-
-#check_straight_flush(['2H','3H','4H','5H','6H'])
-
-#check_royal_flush(['AH','KH','QH','JH','10H'])
-
-
-##poker_winner(player1=['4S','4D','4H'], player2=['QS','JS','10S'])
-poker_winner(player1=['4S','3D','4H','3S'], player2=['QD','AH','5D','2S'])

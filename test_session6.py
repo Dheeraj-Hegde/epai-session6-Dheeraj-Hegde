@@ -128,19 +128,19 @@ def test_three_flush_3():
     '''
     Test case to check the winner between player with a three of a kind or a flush for 3 cards
     '''
-    assert session6.poker_winner(player1=['4S','4D','4H'], player2=['QS','JS','10S']) == "player2", "Three of a kind is greater than flush"
+    assert session6.poker_winner(player1=['4S','4D','4H'], player2=['QS','JS','10S']) == "player2", "Three of a kind is lesser than flush"
 
 def test_three_flush_4():
     '''
     Test case to check the winner between player with a three of a kind or a flush for 4 card hands
     '''
-    assert session6.poker_winner(player1=['4S','4D','4H','8S'], player2=['QS','JS','10S','2S']) == "player2", "Three of a kind is greater than flush"
+    assert session6.poker_winner(player1=['4S','4D','4H','8S'], player2=['QS','JS','10S','2S']) == "player2", "Three of a kind is lesser than flush"
 
 def test_three_flush_5():
     '''
     Test case to check the winner between player with a three of a kind or a flush for 5 card hands
     '''
-    assert session6.poker_winner(player1=['4S','4D','4H','8S','AS'], player2=['QS','JS','10S','2S','AS']) == "player2", "Three of a kind is greater than flush"
+    assert session6.poker_winner(player1=['4S','4D','4H','8S','AS'], player2=['QS','JS','10S','2S','AS']) == "player2", "Three of a kind is lesser than flush"
 
 def test_high_one_pair():
     '''
@@ -171,3 +171,57 @@ def test_draw_5():
     Test case to check the draw between 2 player hands for 5 cards
     '''
     assert session6.poker_winner(player1=['4S','3D','4H','3S','AD'], player2=['5S','3D','3H','5S','QD']) == "Draw", "Two pair is equal to two pair cards"
+
+def test_straight_flush_5():
+    '''
+    Test case to check the winner between player with a straight or a flush for 5 card hands
+    '''
+    assert session6.poker_winner(player1=['4S','5D','6H','7S','8S'], player2=['QS','JS','10S','2S','AS']) == "player2", "Flush is greater than straight"
+
+def test_straight_flush_4():
+    '''
+    Test case to check the winner between player with a straight or a flush for 4 card hands
+    '''
+    assert session6.poker_winner(player1=['4S','5D','6H','7S'], player2=['QS','JS','10S','2S']) == "player2", "Flush is greater than straight"
+
+def test_straight_flush_3():
+    '''
+    Test case to check the winner between player with a straight or a flush for 3 card hands
+    '''
+    assert session6.poker_winner(player1=['4S','5D','6H'], player2=['QS','JS','2S']) == "player2", "Flush is greater than straight"
+
+def test_two_pair_three():
+    '''
+    Test case to check the winner between player with a two pairs and 3 of a kind
+    '''
+    assert session6.poker_winner(player1=['4S','3D','4H','3S','AD'], player2=['QD','QH','QD','2S','5D']) == "player2", "Two pair is lesser than 3 of a kind"
+
+def test_straight_three():
+    '''
+    Test case to check the winner between player with a two pairs and 3 of a kind
+    '''
+    assert session6.poker_winner(player1=['8S','7D','6H','5S','4D'], player2=['QD','QH','QD','2S','5D']) == "player1", "Straight is greater than 3 of a kind"
+
+def test_flush_full():
+    '''
+    Test case to check the winner between player with a flush or full house
+    '''
+    assert session6.poker_winner(player1=['5S','5D','6H','6S','6D'], player2=['QS','JS','2S','AS','8S']) == "player1", "Flush is lesser than full house"
+
+def test_full_four():
+    '''
+    Test case to check the winner between player with a four of a kind or full house
+    '''
+    assert session6.poker_winner(player1=['5S','5D','6H','6S','6D'], player2=['QS','QD','QH','QC','8S']) == "player2", "Four of a kind is greater than full house"
+
+def test_four_straightflush():
+    '''
+    Test case to check the winner between player with a straight flush or four of a kind
+    '''
+    assert session6.poker_winner(player1=['5S','6S','7S','8S','9S'], player2=['QS','QD','QH','QC','8S']) == "player1", "Four of a kind is lesser than straight flush"
+
+def test_straight_royalflush():
+    '''
+    Test case to check the winner between player with a straight flush or royal flush
+    '''
+    assert session6.poker_winner(player1=['5S','6S','7S','8S','9S'], player2=['AS','KS','QS','JS','10S']) == "player2", "Royal Flush is greater than straight flush"
